@@ -1,14 +1,15 @@
 blob = Actor('character')
-blob.pos = 100, 50
+blob.pos = 100, 100
 
 WIDTH = 500
-HEIGHT = blob.height + 20
+HEIGHT = 300
+BACKGROUND_COLOR = (255, 0, 0)
 
 def draw():
-    screen.fill((255, 0, 0))
+    screen.fill(BACKGROUND_COLOR)
     blob.draw()
 
 def update():
-    blob.left = blob.left + 5
+    blob.left = blob.left + 2
     if blob.left > WIDTH:
         blob.right = 0
