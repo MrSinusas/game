@@ -13,3 +13,9 @@ def update():
     blob.left = blob.left + 2
     if blob.left > WIDTH:
         blob.right = 0
+
+
+def on_mouse_down(pos, button):
+    print("You clicked!")
+    if button == mouse.LEFT and blob.collidepoint(pos):
+        print("Eek!")
